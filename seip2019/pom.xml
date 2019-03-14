@@ -4,8 +4,8 @@
   <artifactId>seip2019</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <name>Grades Histogram</name>
-  <description>App that generates histogram of students' grades</description>
+  <name>seip2019</name>
+  <description>Lab assignments of spring semester 2019</description>
   <modules>
   	<module>histoGrades</module>
   </modules>
