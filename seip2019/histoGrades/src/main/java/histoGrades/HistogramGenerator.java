@@ -11,8 +11,6 @@ import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
 
-import java.util.ArrayList;
-
 /***
  * @author nickosfra The purpose of this class is to generate a chart that demonstrates
  * the frequency of students' grades.
@@ -22,14 +20,14 @@ import java.util.ArrayList;
 public class HistogramGenerator {
 	
 	/***
-	 * Recieves an ArrayList that contains the grades of the students,
+	 * Receives an Integer array that contains the frequency of the grades of the students,
 	 * from which the chart is created. At first, a dataset is created
 	 * in order to creates the data series in it, which is only an element
 	 * of the dataset. The chart is finally generated and presented in the screen.
 	 *  
 	 */
 	
-	public void genHist(ArrayList<Integer> dataValues) {
+	public void genHist(int[] dataValues) {
 		
 		/*
 		 * The XYSeriesCollection object (dataset) can also 
@@ -45,7 +43,7 @@ public class HistogramGenerator {
 		int i = 0;
 		/*
 		 * We create our data XYSeries series by adding
-		 * the elements of the ArrayList dataValues.
+		 * the elements of the Integer array dataValues.
 		 */
 		for (int el : dataValues) {
 			data.add(i, el);
@@ -94,23 +92,22 @@ public class HistogramGenerator {
 		}
 		
 		/*
-		 * ArrayList dataValues that will be filled 
+		 * Integer array grades that will be filled 
 	     * with the grades of the students
 		 */
-		ArrayList<Integer> dataValues = new ArrayList<Integer>();
+		int[] grades = new int[11];
+		for (int i =0; i < 11; i++) {
+			grades[i] = 0;
+		}
 		
 		while (scanner.hasNextInt()) {
-			/*
-			 * Add each Int value found in the
-			 * file, in the ArrayList dataValues
-			 */
-			dataValues.add(scanner.nextInt());
+			//System.out.println(grades)
+			grades[scanner.nextInt()]++;
 		}
 		scanner.close();
-		//System.out.println("Data Values:" + dataValues);
 		
 		HistogramGenerator histoGen = new HistogramGenerator();
-		histoGen.genHist(dataValues);		
+		histoGen.genHist(grades);		
 		
 	}
 
