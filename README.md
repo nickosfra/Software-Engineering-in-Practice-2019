@@ -10,10 +10,10 @@ The application was developed in [Eclipse IDE](https://www.eclipse.org/downloads
 * [Java](https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html) version used: `java -version 1.8.0_201`
 
 ### Install
-1. Create a Parent Maven project in order to create the main POM file.
-2. Create a Module Maven project in order to create the child POM file for your module.
-3. Add the charting Java library [JFreeChart](https://mvnrepository.com/artifact/org.jfree/jfreechart/1.5.0) as a **dependency** in your POM.
-4. Add the appropriate plugin to create the fat jar executable Java file.
+1. Make sure you've installed [JDK](https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html) and [Eclipse IDE](https://www.eclipse.org/downloads/packages/release/oxygen/3a/eclipse-ide-java-developers).
+2. Clone this GitHub repository.
+3. Make sure that the charting Java library [JFreeChart](https://mvnrepository.com/artifact/org.jfree/jfreechart/1.5.0) is included in the POM file as a **dependency**.
+4. Add (if missing) the appropriate plugin to create the fat jar executable Java file.
 5. Create a simple `.txt` file or use a sample of the [grades](https://drive.google.com/file/d/1I1zGwuwf8KgQyWnoz0358WczAZvtSuHT/view) of the students.
 
 ### Run
