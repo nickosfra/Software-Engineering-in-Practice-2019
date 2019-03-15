@@ -20,8 +20,6 @@ The application was developed in [Eclipse IDE](https://www.eclipse.org/downloads
 *The file which contains the grades of the students is passed as an argument in the Class that contains the main method.*
 
 * Command Line: `$ java -jar histoGrades-0.0.1-SNAPSHOT-jar-with-dependencies.jar ../grades.txt`
-**Output**
-![Grades Histogram](C:\Users\nicko\Pictures\GradesHistogram.png)
 
 ## Authors
 * Nikolaos Fragkomanolis - *Initial Work*
