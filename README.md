@@ -17,7 +17,7 @@ The application was developed in [Eclipse IDE](https://www.eclipse.org/downloads
 5. Create a simple `.txt` file or use a sample of the [grades](https://drive.google.com/file/d/1I1zGwuwf8KgQyWnoz0358WczAZvtSuHT/view) of the students.
 
 ### Run
-*The file which contains the grades of the students is passed as an argument in the Class that contains the main method.*
+*The file which contains the grades of the students is passed as an argument in the class HistogramGenerator that contains the main method.*
 
 * Command Line: `$ java -jar histoGrades-0.0.1-SNAPSHOT-jar-with-dependencies.jar ../grades.txt`
 
