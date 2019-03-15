@@ -21,7 +21,7 @@ The application was developed in [Eclipse IDE](https://www.eclipse.org/downloads
 
 * Command Line: `$ java -jar histoGrades-0.0.1-SNAPSHOT-jar-with-dependencies.jar ../grades.txt`
 **Output**
-![Grades Histogram](C:\Users\nicko\Desktop\UNI\Software Engineering in Practice\2nd Lab Assignment\gitApp\GradesHistogram.png)
+![Grades Histogram](C:\Users\nicko\Pictures\GradesHistogram.png)
 
 ## Authors
 * Nikolaos Fragkomanolis - *Initial Work*
