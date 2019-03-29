@@ -4,11 +4,6 @@ Application that generates an histogram of students' grades.
 ## Getting Started
 The application was developed in [Eclipse IDE](https://www.eclipse.org/downloads/packages/release/oxygen/3a/eclipse-ide-java-developers) using **Java** as a programming language and **Maven** as a building tool.
 
-### Prerequisites
-* Use [Maven](https://maven.apache.org/ "Maven") to build the project on your local machine. Visit the official [download](https://maven.apache.org/ref/3.6.0/download.cgi "Maven Download") site of The Apache Software Foundation to build it.
-* Maven version used: `mvn -version 3.6.0`
-* [Java](https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html) version used: `java -version 1.8.0_201`
-
 ### Install
 1. Make sure you've installed [JDK](https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html) and [Eclipse IDE](https://www.eclipse.org/downloads/packages/release/oxygen/3a/eclipse-ide-java-developers).
 2. Clone this GitHub repository.
