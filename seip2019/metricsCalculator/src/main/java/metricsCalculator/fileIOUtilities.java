@@ -1,9 +1,13 @@
 package metricsCalculator;
 
-import java.io.File;
+import java.io.BufferedReader;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
 
 /***
  * 
@@ -13,27 +17,53 @@ import java.io.FileOutputStream;
 
 public class fileIOUtilities {
 	
-	public FileInputStream readFile(String p) {
-		FileInputStream in = null;
-		
-		try {
-			in = new FileInputStream(p);			
-		} catch (FileNotFoundException e) {
-			System.err.println("Error: " + e);
-		}
-		
-		return in;
+	private fileIOUtilities() {
+		//private Constructor to prevent class instantiation
 	}
 	
-	public FileOutputStream writeFile(FileInputStream f) {
-		FileOutputStream out = null;
+	public static List<String> readFile(String filepath) throws Exception{
+		List<String> lines = new ArrayList<String>();
+		String thisLine = null;
+		InputStream is = null;
+		InputStreamReader isr = null;
+		BufferedReader br = null;		
 		
 		try {
-			out = new FileOutputStream("output.txt");
-		}		
+			is = new FileInputStream(filepath);
+			isr = new InputStreamReader(is);			
+			br = new BufferedReader(isr);
+			
+			while ((thisLine = br.readLine()) != null) {
+				lines.add(thisLine);				
+			}			
+		} catch (IOException e) {
+			System.err.println("Error" + e);
+		}
 		
-		return null;
+		return lines;
+	}
+	
+	public static void writeFile(String filepath, List<String> content) {
 		
+		FileWriter writer = null;
+		
+		try {
+			writer = new FileWriter(filepath);
+			for (String r : content) {
+				writer.append(r);
+				writer.append(" ");
+			}
+		} catch (IOException e) {
+			System.err.println("Error" + e);
+		} finally {
+			try {
+				writer.flush();
+				writer.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
 		
 	}
+	
 }
