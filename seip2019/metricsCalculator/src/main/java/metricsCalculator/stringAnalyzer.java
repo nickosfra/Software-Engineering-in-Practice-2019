@@ -7,10 +7,26 @@ public class stringAnalyzer {
 	
 	public int countLines(List<String> lines) {
 		this.count = 0;
+		boolean temp = false; //it is true when a multi-line comment is opened and false when closed
 		for (String r : lines) {
-			if (r == null || r.isEmpty()) {
+			r.trim();
+			if (r == null || r.isEmpty()
+					|| (r.startsWith("}") && r.endsWith("}")) //ignore lines which have one single block closure character
+					|| r.contains("//")) {					  //ignore comments					 
 				continue;
 			}
+			if (r.contains("/*") || r.contains("/**")) {
+				temp = true;
+				continue;				
+			}
+			if (r.endsWith("*/")) {
+				temp = false;
+				continue;
+			}
+			if (temp == false) {
+				this.count++;
+			}
+			
 			
 		}
 		
