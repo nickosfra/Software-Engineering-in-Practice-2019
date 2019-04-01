@@ -26,10 +26,8 @@ public class stringAnalyzer {
 			if (temp == false) {
 				this.count++;
 			}			
-		}
-		
+		}		
 		return count;
-		
 	}
 	
 	public int countClasses(List<String> lines) {
@@ -39,8 +37,7 @@ public class stringAnalyzer {
 			if (r.startsWith("public class") || r.startsWith("class")) {
 				this.count ++;
 			}
-		}
-		
+		}		
 		return count;		
 	}
 	
@@ -55,8 +52,7 @@ public class stringAnalyzer {
 				this.count++;				
 			}
 		}
-		return count;
-		
+		return count;		
 	}
 	
 }
