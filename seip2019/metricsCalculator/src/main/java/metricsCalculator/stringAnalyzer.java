@@ -25,14 +25,10 @@ public class stringAnalyzer {
 			}
 			if (temp == false) {
 				this.count++;
-			}
-			
-			
+			}			
 		}
 		
-		
-		
-		return 0;
+		return count;
 		
 	}
 	
