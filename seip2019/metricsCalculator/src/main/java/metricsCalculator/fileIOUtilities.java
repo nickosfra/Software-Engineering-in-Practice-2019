@@ -51,7 +51,6 @@ public class fileIOUtilities {
 			writer = new FileWriter(filepath);
 			for (String r : content) {
 				writer.append(r);
-				writer.append(" ");
 			}
 		} catch (IOException e) {
 			System.err.println("Error" + e);
