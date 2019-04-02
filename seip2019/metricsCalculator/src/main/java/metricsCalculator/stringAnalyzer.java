@@ -46,7 +46,7 @@ public class stringAnalyzer implements Analyzer {
 		for (String r: lines) {
 			r.trim();
 			if (r.startsWith("public") || r.startsWith("private")					
-					&& r.contains("(")
+					|| r.contains("(")
 					&& r.contains(")")
 					&& r.contains("{")) {
 				this.count++;				
