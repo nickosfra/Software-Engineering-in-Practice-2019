@@ -8,22 +8,24 @@ public class stringAnalyzer implements Analyzer {
 	public int countLines(List<String> lines) {
 		this.count = 0;
 		boolean temp = false; //it is true when a multi-line comment is opened and false when closed
+		String trimmedLine;
 		for (String r : lines) {
-			r.trim();
-			if (r == null || r.isEmpty()
-					|| (r.startsWith("}") && r.endsWith("}")) //ignore lines which have one single block closure character
-					|| r.contains("//")) {					  //ignore comments					 
+			trimmedLine = r.trim();
+			if (trimmedLine == null || trimmedLine.isEmpty()
+					|| (trimmedLine.startsWith("}") && trimmedLine.endsWith("}")) //ignore lines which have one single block closure character
+					|| trimmedLine.contains("//")) {					  //ignore comments					 
 				continue;
 			}
-			if (r.contains("/*") || r.contains("/**")) {
+			if (trimmedLine.contains("/*") || trimmedLine.contains("/**")) {
 				temp = true;
 				continue;				
 			}
-			if (r.endsWith("*/")) {
+			if (trimmedLine.endsWith("*/")) {
 				temp = false;
 				continue;
 			}
 			if (temp == false) {
+				//System.out.println(r);
 				this.count++;
 			}			
 		}		
@@ -32,9 +34,10 @@ public class stringAnalyzer implements Analyzer {
 	
 	public int countClasses(List<String> lines) {
 		this.count = 0;
+		String trimmedLine;
 		for (String r : lines) {
-			r.trim();
-			if (r.startsWith("public class") || r.startsWith("class")) {
+			trimmedLine = r.trim();
+			if (trimmedLine.startsWith("public class") || trimmedLine.startsWith("class")) {
 				this.count ++;
 			}
 		}		
@@ -43,12 +46,14 @@ public class stringAnalyzer implements Analyzer {
 	
 	public int countMethods(List<String> lines) {
 		this.count = 0;
+		String trimmedLine;
 		for (String r: lines) {
-			r.trim();
-			if (r.startsWith("public") || r.startsWith("private")					
-					|| r.contains("(")
-					&& r.contains(")")
-					&& r.contains("{")) {
+			trimmedLine = r.trim();
+			if ((trimmedLine.startsWith("public") || trimmedLine.startsWith("private"))					
+					&& (trimmedLine.contains("(")
+					&& trimmedLine.contains(")")
+					&& trimmedLine.contains("{"))) {
+				System.out.println(r);
 				this.count++;				
 			}
 		}
