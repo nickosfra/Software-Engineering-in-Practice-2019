@@ -25,7 +25,6 @@ public class stringAnalyzer implements Analyzer {
 				continue;
 			}
 			if (temp == false) {
-				//System.out.println(r);
 				this.count++;
 			}			
 		}		
@@ -53,7 +52,6 @@ public class stringAnalyzer implements Analyzer {
 					&& (trimmedLine.contains("(")
 					&& trimmedLine.contains(")")
 					&& trimmedLine.contains("{"))) {
-				System.out.println(r);
 				this.count++;				
 			}
 		}
