@@ -2,7 +2,7 @@ package metricsCalculator;
 
 import java.util.List;
 
-public class stringAnalyzer {
+public class stringAnalyzer implements Analyzer {
 	int count;
 	
 	public int countLines(List<String> lines) {
@@ -54,5 +54,4 @@ public class stringAnalyzer {
 		}
 		return count;		
 	}
-	
 }
