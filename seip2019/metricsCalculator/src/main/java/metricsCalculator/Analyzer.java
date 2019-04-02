@@ -1,9 +1,11 @@
 package metricsCalculator;
 
+import java.util.List;
+
 public interface Analyzer {
 	
-	public void countLines();
-	public void countClasses();
-	public void countMethods();
+	public int countLines(List<String> lines);
+	public int countClasses(List<String> lines);
+	public int countMethods(List<String> lines);
 
 }
