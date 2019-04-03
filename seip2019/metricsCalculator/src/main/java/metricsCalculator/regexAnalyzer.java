@@ -8,18 +8,19 @@ public class regexAnalyzer implements Analyzer {
 	public int countLines(List<String> lines) {
 		this.count = 0;
 		boolean temp = false; //it is true when a multi-line comment is opened and false when closed
+		String trimmedLine;
 		for (String r : lines) {
-			r.trim();
-			if (r.matches("\\s*") 
-					|| r.matches("^}") && r.matches("$}")
-					|| r.matches(".//")) {
+			trimmedLine = r.trim();
+			if (trimmedLine.matches("\\s*") 
+					|| trimmedLine.matches("^}") && trimmedLine.matches("$}")
+					|| trimmedLine.matches(".//")) {
 				continue;
 			}
-			if (r.matches(".[/*]") || r.matches(".[/**]")) {
+			if (trimmedLine.matches(".[/*]") || trimmedLine.matches(".[/**]")) {
 				temp = true;
 				continue;
 			}
-			if (r.matches("$*/")) {
+			if (trimmedLine.matches("$*/")) {
 				temp = false;
 				continue;
 			}
@@ -33,9 +34,10 @@ public class regexAnalyzer implements Analyzer {
 
 	public int countClasses(List<String> lines) {
 		this.count = 0;
+		String trimmedLine;
 		for (String r : lines) {
-			r.trim();
-			if (r.matches("[\\Apublic class]") || r.matches("[\\Aclass]")) {
+			trimmedLine = r.trim();
+			if (trimmedLine.matches(".*\\bpublic class\\b") || trimmedLine.matches(".*\\bclass\\b]")) {
 				this.count ++;
 			}
 		}
@@ -45,9 +47,13 @@ public class regexAnalyzer implements Analyzer {
 
 	public int countMethods(List<String> lines) {
 		this.count = 0;
+		String trimmedLine;
 		for (String r : lines) {
-			r.trim();
-			if (r.matches("[(){]")) {
+			trimmedLine = r.trim();
+			if ((trimmedLine.matches("^public") || trimmedLine.matches("private"))
+					&& (trimmedLine.matches("\\(")
+							&& trimmedLine.matches("\\)")
+							&& trimmedLine.matches("\\{"))) {
 				this.count ++;
 			}			
 		}
