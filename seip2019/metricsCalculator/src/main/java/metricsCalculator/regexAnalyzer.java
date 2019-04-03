@@ -37,7 +37,7 @@ public class regexAnalyzer implements Analyzer {
 		String trimmedLine;
 		for (String r : lines) {
 			trimmedLine = r.trim();
-			if (trimmedLine.matches(".*\\bpublic class\\b") || trimmedLine.matches(".*\\bclass\\b]")) {
+			if (trimmedLine.matches("\\bclass\\b")) {
 				this.count ++;
 			}
 		}
@@ -50,10 +50,7 @@ public class regexAnalyzer implements Analyzer {
 		String trimmedLine;
 		for (String r : lines) {
 			trimmedLine = r.trim();
-			if ((trimmedLine.matches("^public") || trimmedLine.matches("private"))
-					&& (trimmedLine.matches("\\(")
-							&& trimmedLine.matches("\\)")
-							&& trimmedLine.matches("\\{"))) {
+			if (trimmedLine.matches("(public|protected|private|static|\\s) +[\\w\\<\\>\\[\\]]+\\s+(\\w+) *\\([^\\)]*\\) *(\\{?|[^;])")) {
 				this.count ++;
 			}			
 		}
