@@ -16,7 +16,7 @@
        			<archive>
             		<manifest>
                 		<addClasspath>true</addClasspath>
-                		<mainClass>metricsCalculator.codeAnalyzerDEMO</mainClass>
+                		<mainClass>metricsCalculator.CodeAnalyzerDEMO</mainClass>
             		</manifest>
         		</archive>
     		</configuration>
