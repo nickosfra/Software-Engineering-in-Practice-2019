@@ -6,9 +6,9 @@ public class AnalyzerFactory {
 		Analyzer analyzer = null;
 		
 		if (type.equals("string")) {
-			analyzer = new stringAnalyzer();
+			analyzer = new StringAnalyzer();
 		} else if (type.equals("regex")) {
-			analyzer = new regexAnalyzer();
+			analyzer = new RegexAnalyzer();
 		}		
 		
 		return analyzer;

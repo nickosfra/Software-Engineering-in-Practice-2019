@@ -2,7 +2,7 @@ package metricsCalculator;
 
 import java.util.List;
 
-public class regexAnalyzer implements Analyzer {
+public class RegexAnalyzer implements Analyzer {
 	int count;
 	
 	public int countLines(List<String> lines) {

@@ -3,7 +3,7 @@ package metricsCalculator;
 import java.util.ArrayList;
 import java.util.List;
 
-public class codeAnalyzer {
+public class CodeAnalyzer {
 	
 	public void analyzeCode(String pathOfSourceFile, String typeOfAnalysis, String outputFile) {		
 		int linesOfCode;
@@ -13,7 +13,7 @@ public class codeAnalyzer {
 		
 		List<String> lines = new ArrayList<String>();
 		try {
-			lines = fileIOUtilities.readFile(pathOfSourceFile);
+			lines = FileIOUtilities.readFile(pathOfSourceFile);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -22,9 +22,9 @@ public class codeAnalyzer {
 		linesOfCode = analyzer.countLines(lines);
 		numberOfClasses = analyzer.countClasses(lines);
 		numberOfMethods = analyzer.countMethods(lines);
-		metrics = codeAnalyzer.combineMetrics(linesOfCode, numberOfClasses, numberOfMethods);		
+		metrics = CodeAnalyzer.combineMetrics(linesOfCode, numberOfClasses, numberOfMethods);		
 		
-		fileIOUtilities.writeFile(outputFile, metrics);
+		FileIOUtilities.writeFile(outputFile, metrics);
 	}
 	
 	public static List<String> combineMetrics(int linesOfCode, int numberOfClasses, int numberOfMethods){

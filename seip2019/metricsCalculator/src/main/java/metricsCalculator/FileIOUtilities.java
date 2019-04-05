@@ -15,9 +15,9 @@ import java.util.List;
  *
  */
 
-public class fileIOUtilities {
+public class FileIOUtilities {
 	
-	private fileIOUtilities() {
+	private FileIOUtilities() {
 		//private Constructor to prevent class instantiation
 	}
 	

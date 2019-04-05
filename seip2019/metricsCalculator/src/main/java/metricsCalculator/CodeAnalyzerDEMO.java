@@ -1,6 +1,6 @@
 package metricsCalculator;
 
-public class codeAnalyzerDEMO {
+public class CodeAnalyzerDEMO {
 
 	public static void main(String[] args) {
 		
@@ -9,7 +9,7 @@ public class codeAnalyzerDEMO {
 			System.exit(1);
 		}
 		
-		codeAnalyzer analyzer = new codeAnalyzer();
+		CodeAnalyzer analyzer = new CodeAnalyzer();
 		analyzer.analyzeCode(args[0], args[1], "./metrics.csv");
 	}
 
