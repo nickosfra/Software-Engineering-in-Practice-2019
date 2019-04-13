@@ -22,3 +22,8 @@ hs_err_pid*
 .settings
 
 *.lst
+
+/target/
+
+
+*.gitignore

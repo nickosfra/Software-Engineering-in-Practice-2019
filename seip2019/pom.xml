@@ -8,5 +8,6 @@
   <description>Lab assignments of spring semester 2019</description>
   <modules>
   	<module>histoGrades</module>
+  	<module>metricsCalculator</module>
   </modules>
 </project>
