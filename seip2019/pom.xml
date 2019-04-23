@@ -9,5 +9,6 @@
   <modules>
   	<module>histoGrades</module>
   	<module>metricsCalculator</module>
+  	<module>unittesting</module>
   </modules>
 </project>
