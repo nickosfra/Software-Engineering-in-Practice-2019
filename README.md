@@ -12,6 +12,7 @@ Assignments which aim to develop small Java applications based on commonly used 
 ### Projects
 * [histogrades](https://github.com/nickosfra/seip2019/tree/development/seip2019/histoGrades): Application that generates a histogram of students' grades. Check the relative [README](https://github.com/nickosfra/seip2019/blob/development/seip2019/histoGrades/README.md) file to find more information about how to build and run it.
 * [metricsCalculator](https://github.com/nickosfra/seip2019/tree/development/seip2019/metricsCalculator) : Application that receives a Java file, calculates and presents 3 types of metrics; lines of code, number of classes and numbers of methods used in that file. Check the relative [README](https://github.com/nickosfra/seip2019/blob/development/seip2019/metricsCalculator/README.md) file to find more information about how to build and run it.
+* [unittesting](https://github.com/nickosfra/seip2019/tree/master/seip2019/unittesting): This module contains tests for some java files. They check both the functionality and some exceptions that may occur during the execution of the program. Check the relative [README](https://github.com/nickosfra/seip2019/blob/master/seip2019/unittesting/README.md) file to find more information about this testing module.
 
 ## Authors
 * Nikolaos Fragkomanolis - *Initial Work*
