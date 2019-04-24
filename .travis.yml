@@ -4,5 +4,9 @@ jdk:
  - openjdk8
  - oraclejdk8
 
+branches:
+  only:
+  -master
+
 script:
  - mvn clean package jacoco:report coveralls:report
