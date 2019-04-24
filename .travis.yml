@@ -5,4 +5,4 @@ jdk:
  - oraclejdk8
 
 script:
- - mvn package jacoco:report coveralls:report
+ - mvn clean package jacoco:report coveralls:report
