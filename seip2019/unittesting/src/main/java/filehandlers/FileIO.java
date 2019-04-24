@@ -26,7 +26,8 @@ public class FileIO {
 		List<Integer> linesList = new ArrayList();
 		
 		
-		try (BufferedReader reader = new BufferedReader(new FileReader(filepath))){
+		try {
+			BufferedReader reader = new BufferedReader(new FileReader(filepath));
 			String line;
 			while((line = reader.readLine()) != null) {
 				linesList.add(Integer.parseInt(line));
