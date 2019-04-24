@@ -1,4 +1,4 @@
-#unittesting
+# unittesting
 This module contains tests for some java files. They check both the functionality and some exceptions that may occur during the execution of the program.
 
 ## Getting Started
@@ -10,4 +10,4 @@ The module was developed in [Eclipse IDE](https://www.eclipse.org/downloads/pack
 3. You will find some txt files (./resources) that are given as inputs to be examined by the tests.
 
 ## Authors
-* Nikolaos Fragkomanolis - *Initial Work* 
+* Nikolaos Fragkomanolis - *Initial Work*
