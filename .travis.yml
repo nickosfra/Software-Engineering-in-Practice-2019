@@ -4,5 +4,7 @@ jdk:
  - openjdk8
  - oraclejdk8
 
+before_script: cd seip2019/
+
 script:
  - mvn clean package jacoco:report coveralls:report
