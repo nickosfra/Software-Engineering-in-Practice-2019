@@ -19,11 +19,15 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.eluder.coveralls</groupId>
-				<artifactId>coveralls-maven-plugin</artifactId>
-				<version>4.3.0</version>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>cobertura-maven-plugin</artifactId>
+				<version>2.7</version>
 				<configuration>
-					<repoToken>qEqcyFXrl0pSg5o1iXE2Hc05NFJ9p9WkO</repoToken>
+					<formats>
+						<format>html</format>
+						<format>xml</format>
+					</formats>
+					<check />
 				</configuration>
 			</plugin>
 			<plugin>
