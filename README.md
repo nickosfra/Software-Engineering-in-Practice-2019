@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/nickosfra/seip2019.svg?branch=master)](https://travis-ci.com/nickosfra/seip2019)
+[![Build Status](https://travis-ci.com/nickosfra/seip2019.svg?token=TteJZv8bg46Tne77Yf1c&branch=master)](https://travis-ci.com/nickosfra/seip2019)
 [![Coverage Status](https://coveralls.io/repos/github/nickosfra/seip2019/badge.svg?branch=master)](https://coveralls.io/github/nickosfra/seip2019?branch=master)
 
 # Software Engineering in Practice assignments | Spring semester 2019
