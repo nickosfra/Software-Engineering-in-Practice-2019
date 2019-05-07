@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.com/nickosfra/seip2019.svg?token=TteJZv8bg46Tne77Yf1c&branch=master)](https://travis-ci.com/nickosfra/seip2019)
-[![Coverage Status](https://coveralls.io/repos/github/nickosfra/seip2019/badge.svg?branch=master)](https://coveralls.io/github/nickosfra/seip2019?branch=master)
+[![codecov](https://codecov.io/gh/nickosfra/seip2019/branch/development/graph/badge.svg?token=6ZJ40kzhcd)](https://codecov.io/gh/nickosfra/seip2019)
 
 # Software Engineering in Practice assignments | Spring semester 2019
 Assignments which aim to develop small Java applications based on commonly used building tools (Maven) and IDEs (Eclipse).
