@@ -48,5 +48,10 @@ public class IntegerOperationsTest {
 	public void test_getBigInteger_exception() {
 		iop.powerOfTwo(36);
 	}
+	
+	@Test
+	public void normalCase() {
+		Assert.assertEquals(20, iop.add(10,10));
+	}
 
 }
